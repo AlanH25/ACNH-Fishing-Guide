@@ -1,0 +1,385 @@
+html{
+	scroll-behavior: smooth;
+	
+}
+body {
+  //background-color: #f1faee;
+  //background-color: #fafaee;
+  background-color: #ede4bb;
+  
+
+}
+
+h1 {
+	font-family:'Signika', sans-serif;
+    font-size: 75px;
+	font-weight: 700;
+    color: #1d3557;
+	text-align: center;
+	margin: 0;
+}
+
+h2 {
+	font-family: 'Varela Round', sans-serif;
+    font-size: 25px;
+    color: #457b9d;
+	text-align: center;
+}
+
+h3 {
+	font-family:'Signika', sans-serif;
+    font-size: 50px;
+	font-weight: 700;
+	text-align: center;
+	margin: 0;
+	padding: 25px 0 0 0;
+}
+
+h4 {
+	font-family:'Signika', sans-serif;
+    font-size: 50px;
+	font-weight: 700;
+	text-align: center;
+	padding-left: 10px;
+	padding-top:15px;
+	margin: 0;
+}
+
+h5 {
+	padding-left: 10px;
+	float:left;
+	font-family: 'Varela Round', sans-serif;
+    font-size: 25px;
+    color: #457b9d;
+}
+
+
+p {
+	font-family:'Signika', sans-serif;
+    font-size: 20px;
+	color: #004E89;
+}
+p2 {
+	
+	font-family:'Signika', sans-serif;
+    font-size: 20px;
+	color: #004E89;
+}
+.translateText{
+	float:right;
+	padding-right:30px;
+	color:white;
+	cursor: pointer;
+
+}
+
+label {
+	padding-left: 10px;
+	font-family:'Signika', sans-serif;
+	color: #004E89;
+	font-weight: bold;
+}
+
+label.option {
+	padding-right: 10%;
+	font-family:'Signika', sans-serif;
+	color: #004E89;
+	font-weight: bold;
+	width: 150px;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  align: center;
+  clear: left
+}
+.logo{
+	height:75px;
+	width:75px;
+	padding-left: 7px;
+	padding-top: 7px;
+}
+.icon{
+	height:50px;
+	width:50px;
+	display: inline-block;
+}
+
+.icon2{
+	height:65px;
+	width:65px;
+	display: inline-block;
+}
+.icon3{
+	height:65px;
+	width:80px;
+	display: inline-block;
+}
+
+table {
+	border: 1px solid black;
+	background-color: #f1f1c1;
+}
+
+/* Defining styling for a specific element type - each question */
+.textBlock {
+  background-color: #f5f1df;
+  //color: FF6B35;
+  color: black;
+  margin: 20px;
+  padding: 20px;
+  border-left:10px solid #a8dadc;
+  border-radius: 15px;
+  text-align:center;
+
+}
+
+.imageBorder {
+	margin-left: 450px;
+	float:left;
+    border:10px solid #fffcfc;
+    border-radius: 25px;
+	-webkit-transition: 1s;
+    transition: 0.3s;
+}
+
+.imageBorder:hover {
+    border:10px solid #a8dadc;
+    border-radius: 10px;
+    -webkit-transition: 1s;
+    transition: 0.3s;
+}
+	
+img.icon-small{
+	width:40px;
+	height:40px;
+	display: inline-block;
+}
+
+
+.block {
+  display: block;
+  width: 100%;
+  border: 0;
+  border-radius: 20px;
+  background-color: #457b9d; 
+  padding: 14px 0px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  -webkit-transition: 1s;
+  transition: 0.3s;
+
+}
+
+.block:hover {
+  background-color: #fff; 
+  color: #004E89;
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition: 1s;
+   transition: 0.3s;
+}
+
+.selectBlock{
+  background-color: #fff; 
+  border-radius: 20px;
+  color: #457b9d;
+  text-align: center;
+}
+
+.block2 {
+    background-color: #66ccde;
+    width: 100%;
+	height: 140px;
+    margin: 0 auto;
+	left: -5px;
+	width: 101%;
+    padding: 0;
+    position: fixed;
+    list-style-type: none;
+    top: 0;
+	color:white;
+}
+
+.tipsBlock {
+	display: block;
+	width: 75%;
+	border-radius: 50px;
+	left: 50%; 
+	margin:0 200px;
+	background-color: #92d3de; 
+	padding: 14px 0px;
+	font-size: 16px;
+	text-align: center;
+	color: black;
+}
+.dot, .dot2{
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.dot{
+	opacity: .35;
+}
+
+
+
+ul.hdr {
+	z-index: 3;
+    position: fixed;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #004E89;
+    top: 0;
+    width: 100%;
+    margin: 0 auto;
+	left: -5px;
+	width: 101%;
+    padding: 0;
+	color: white;
+
+} 
+li.list{
+	float:left
+}	
+li.hd {
+	float: right;
+}
+
+li.hd :hover{
+	background-color: white;
+    -webkit-transition: 1s;
+    transition: 0.3s;
+}
+li.hd a {
+    font-size: 20pt;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Varela Round',sans-serif;
+	-webkit-transition: 1s;
+    transition: 0.3s;
+
+}
+li.hd a:hover {
+    color: #457b9d;
+    -webkit-transition: 1s;
+    transition: 0.3s;
+}
+
+li.hd button {
+	cursor: pointer;
+	background-color: #004E89;
+    font-size: 20pt;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    text-decoration: none;
+    font-family: 'Varela Round',sans-serif;
+	-webkit-transition: 1s;
+    transition: 0.3s;
+	border:0;
+
+}
+li.hd button:hover {
+    color: #457b9d;
+	border:0;
+    -webkit-transition: 1s;
+    transition: 0.3s;
+}
+
+
+.tabcontent{
+	display:none;
+}
+	
+.tabcontentDefault{
+}
+
+
+.prev,
+.next {
+  cursor: pointer;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 35px;
+  user-select: none;
+  -webkit-user-select: none;
+  
+}
+
+.next {
+	float:right;
+}
+
+.prev {
+	float:left;
+}
+
+.prev:hover,
+.next:hover {
+	color:#004E89;
+}
+
+/* tooltip inspired by https://www.w3schools.com/css/css_tooltip.asp*/
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 750px;
+  background-color: #f5f1df;
+  text-align: center;
+  border-radius: 15px;
+  font-family:'Signika', sans-serif;
+  font-size: 20px;
+  color: #004E89;
+  padding: 10px 0;
+  opacity: 0;
+  transition: opacity 1s;
+  
+  position: absolute;
+  
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  top: -5px;
+  left: 105%;
+  
+    opacity: 100;
+  transition: opacity 1s;
+
+  
+  
+}
+
+
+
+p.sig{
+	font-family: 'Varela Round', sans-serif;
+    font-size: 12px;
+    color: #457b9d;
+	text-align: right;
+}
+
+.footer {
+	float:bottom;
+    right: 0;
+    width: 100%;
+	
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+	<head>
+ 
+    <meta charset="utf-8">	
+	
+	<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+	<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+	
+	<title id = "title">ACNH Fishing Guide</title>
+	
+    <body>
+	<link rel="icon" href="images/leaf-logo.png">
+	<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap" rel="stylesheet">
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+	</head>
+			
+	<ul class = "hdr">
+		<li class = "list"><a href="#top"><img src="images/leaf-logo.png" alt="leaf" class="logo"></a></li>
+		<li class = "list"><h4 id = "name" >ACNH Fishing Guide<h4></li>
+		<li class = "hd" ><button id = "testButton" onclick="openInfo('Test'); resetTest()"> <img class ="icon-small" src="images/timer-white.png" > Reaction Test </button></li>
+		<li class = "hd" ><button id = "indexButton" onclick="openInfo('Index'); populateListFish('displayFish')"> <img class ="icon-small" src="images/index-white.png" > Fish Index</button></li>
+		<li class = "hd" ><button id = "tipsButton" onclick="openInfo('Tips')"> <img class ="icon-small" src="images/fishing-pole-white.png" > Fishing Tips</button></li>
+
+	</ul>
+	
+	<div class ="block2">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<p class = "translateText"  onclick="translateText()" id = "translate" >Fran&#231ais<p></div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	
+
+	<!--  Fishing Tips -->
+	
+	<div id="Tips" class="tabcontentDefault">
+	
+		<h1> <img class ="icon2" src="images/fishing-pole.png" > How to Fish</h1>
+
+		<div class="textBlock">
+			<h2>Here are basics on how to fish:</h2>
+			<p>In order to catch a fish, you must have a fishing rod ready in your hand. These can be purchased at the Nook's Cranny or crafted using five sticks. 
+			<br>
+			<br>
+			With your fishing rod ready to go, simply press 'A' near a body of water to cast it. If your bobber lands directly in front of a fish shadow's line of sight, the fish will start swimming towards it. Once the fish is close enough, it will swim up to the bobber and touch it. 
+			<br>
+			<br>
+			Be patient; if the fish simply nibbles, reeling in your rod will scare it off. If the fish bites down, however, press 'A' as quickly as possible to reel it in. If you were fast enough, you may have just reeled in a new aquatic friend - or another sea bass.</p>
+			
+			
+			
+		</div>
+		
+		<br>
+		<div class = "tipsBlock">
+			<h4 >Tips & Tricks<h4>
+			<a class="prev" onclick="nextTip(-1)"><</a>
+			<a class="next" onclick="nextTip(1)">></a>
+			<p id = "tipText"></p>
+			
+			<p id = "dots"></p>
+			
+		</div>
+		
+		<br>
+		
+	</div>
+	
+	
+		<!--  Fishing Tips -->
+	
+	<div id="TipsFR" class="tabcontent">
+	
+		<h1> <img class ="icon2" src="images/fishing-pole.png" > Comment P&#234cher </h1>
+
+		<div class="textBlock">
+			<h2>Voici comment vous pouvez p&#234cher :</h2>
+			<p>
+			Pour attraper un poisson, vous devez avoir acc&#232s a une canne a p&#234che. Ceux-ci peuvent &#234tre achet&#233s a Nook's Cranny ou fabriqu&#233s a l'aide de cinq b&#226tons. 
+			<br>
+			<br>
+			Avec votre canne a p&#234che pr&#234te, appuyez sur <A> pr&#232s d'un plan d'eau pour le lancer. Si votre bobber tombe directement devant une ombre de poisson, le poisson commencera a nager envers lui. Lorsque le poisson est assez proche, il nagera jusqu'au bobber et le touchera. 
+			<br>
+			<br>
+			Soyez patient; si le poisson grignote simplement, enrouler votre canne l'effraiera. Cependant, si le poisson mord, appuyez sur <A> aussi vite que possible pour l'enrouler. Si vous &#233tiez assez rapide, &#231a se peut que vous avez attrap&#233 un nouvel ami aquatique - ou un autre bar.
+			</p>
+			
+			
+			
+		</div>
+		
+		<br>
+		<div class = "tipsBlock">
+			<h4 >Trucs & Astuces<h4>
+			<a class="prev" onclick="nextTip(-1)"><</a>
+			<a class="next" onclick="nextTip(1)">></a>
+			<p id = "tipTextFR"></p>
+			
+			<p id = "dotsFR"></p>
+			
+		</div>
+		
+		<br>
+		
+	</div>
+	
+	
+	
+	<!--  FISH INDEX  -->
+	
+	<div id="Index" class="tabcontent">
+	
+		<h1> <img class ="icon" src="images/index.png" > Fish Index</h1>
+		
+		<div class="selectBlock">
+		<br>
+			<label>Sort By:</label>
+			
+			<input type="radio" id="alphabetical" name="category" value="Alphabetical" checked="checked" onClick="populateListFish('displayFish')">
+			<label for="alphabetical" class = "option" >Alphabetical</label>
+			
+			<input type="radio" id="sell-value" name="category" value="Sell-Value" onClick="populateListFish('displayFish')">
+			<label for="sell-value" class = "option" >Sell Value</label>
+			
+			<input type="radio" id="size" name="category" value="Size" onClick="populateListFish('displayFish')">
+			<label for="size" class = "option" >Size</label>
+			
+			<input type="radio" id="rarity" name="category" value="Rarity" onClick="populateListFish('displayFish')">
+			<label for="rarity" class = "option" >Rarity</label>
+				
+		<br>
+		<br>
+		</div>
+		
+		<div class="textBlock">
+			<div id="displayFish"></div>
+		</div>
+	
+	</div>
+
+	<!--  Reaction Test  -->
+
+	<div id="Test" class="tabcontent">
+
+		<h1> <img class ="icon" src="images/timer.png" > Reaction Test</h1>
+
+		<div class="textBlock">
+			<h2>How the reaction test works:</h2>
+			<p>Try out this reaction test to improve your reaction time and ensure you never let another fish go! Start the test by pressing the 'Start' button below. When starting the test, you'll see a series of up to 4 ' . ' characters appear sequentially; this mimics the fish nibbling on the bobber. Press the button again as soon as the fish bites and '! ! !' appears on the screen. Press it fast enough and you might just catch the fish successfully!</p>
+		</div>
+
+		<button class = "block" id = "test" onClick="reactionTest()">
+			<h3 id = "testText">Click to Start</h3>
+		</button>
+		
+		<h3 id = "bestTime">Best Time: 0.420</h3>
+		<h3 id = "testResult">&nbsp </h3>
+		
+		
+		<div class="tooltip"><img class ="icon3" src="images/question-mark.png" >
+		  <span class="tooltiptext">Press the 'Start' Button to begin and press it again once you see '!!!' appear on the screen.
+		  <br>						If you press it too soon, it won't count. To retry the test, simply press the button when the results are displayed</span>
+		</div>
+
+	</div>
+	
+	<div class = "footer">
+		<p class = "sig" >Site created by Alan Harris</p>	
+	</div>
+
+
+	<script src="scripts/fishIndex.js"></script>
+	<script src="scripts/test.js"></script>
+	<script src="scripts/main.js"></script>
+	<script src="scripts/tips.js"></script>
+	
+	
+  </body>
+</html> 
